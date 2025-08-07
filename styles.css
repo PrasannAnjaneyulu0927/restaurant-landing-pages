@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom right, #000814, #003b46, #001c1c);
+  color: #e0f7fa;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  background: #f2f2f2;
+  color: #222;
+}
+
+.navbar {
+  background-color: rgba(0, 12, 20, 0.85);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #00ffd1;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #e0f7fa;
+  font-weight: 600;
+}
+
+.nav-links ul li a:hover {
+  color: #00ffd1;
+}
+
+.mode-toggle {
+  background: #00ffd1;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #001f1f;
+}
+
+.hero-section {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1541542684-4b250f0b3c7d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 10, 15, 0.7);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(to right, #00ffd1, #00c853);
+  border: none;
+  border-radius: 30px;
+  color: #001f1f;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  opacity: 0.85;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  color: #00ffd1;
+  margin-bottom: 30px;
+}
+
+.menu-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-tabs input[type="radio"] {
+  display: none;
+}
+
+.menu-tabs label {
+  background-color: #e0f7fa;
+  color: #001f1f;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-tabs input#veg:checked ~ .veg,
+.menu-tabs input#nonveg:checked ~ .nonveg,
+.menu-tabs input#desserts:checked ~ .desserts {
+  display: block;
+}
+
+.menu-tabs .tab-content {
+  display: none;
+  background-color: rgba(0, 255, 209, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu-tabs .tab-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-tabs .tab-content ul li {
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  background: linear-gradient(to right, #00ffd1, #00c853);
+  font-weight: bold;
+  color: #001f1f;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.85;
+}
+
+footer {
+  background-color: #001014;
+  padding: 20px;
+  color: #bbb;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
