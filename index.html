@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ByteXL Fine Dining</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo"><a href="#">ByteXL</a></div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Experience Culinary Artistry<br> at ByteXL</h1>
+      <a href="#reserve"><button class="cta-button">Reserve Your Experience</button></a>
+    </div>
+  </main>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>ByteXL offers an immersive fine dining experience where every dish is a masterpiece. Our chefs blend innovation with tradition to craft unforgettable culinary moments.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu</h2>
+    <div class="menu-tabs">
+      <input type="radio" id="veg" name="menu-tab" checked>
+      <label for="veg">Vegetarian</label>
+      <input type="radio" id="nonveg" name="menu-tab">
+      <label for="nonveg">Non-Vegetarian</label>
+      <input type="radio" id="desserts" name="menu-tab">
+      <label for="desserts">Desserts</label>
+
+      <div class="tab-content veg">
+        <ul>
+          <li>Truffle Paneer Tikka</li>
+          <li>Garden Vegetable Risotto</li>
+          <li>Palak Ricotta Ravioli</li>
+        </ul>
+      </div>
+
+      <div class="tab-content nonveg">
+        <ul>
+          <li>Herb Grilled Chicken</li>
+          <li>Garlic Butter Shrimp</li>
+          <li>Classic Coq Au Vin</li>
+        </ul>
+      </div>
+
+      <div class="tab-content desserts">
+        <ul>
+          <li>Molten Lava Cake</li>
+          <li>Berry Cheesecake</li>
+          <li>French Crème Brûlée</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <!-- images remain unchanged -->
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Fine Dining Table Setting">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Delicious Gourmet Dish">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Elegant Restaurant Interior">
+      <img src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?auto=format&fit=crop&w=800&q=80" alt="Dessert Presentation">
+      <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=800&q=80" alt="Cozy Candlelit Ambience">
+      <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80" alt="Chef in Action">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Artistic Beverage Presentation">
+    </div>
+  </section>
+<section id="reserve">
+  <h2>Book Your Table</h2>
+  <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+    <input type="text" name="name" placeholder="Your Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="number" name="guests" placeholder="No. of Guests" required>
+    
+    <!-- ✅ Updated datetime-local input -->
+    <input type="datetime-local" id="datetime" name="datetime" required min="2025-08-05T00:00" value="2025-08-05T07:00">
+
+    
+    <label for="meal">Select Meal:</label>
+    <select name="meal" id="meal" required>
+      <option value="">--Choose--</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+    
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_subject" value="New Table Reservation - ByteXL">
+    <button type="submit">Confirm Reservation</button>
+  </form>
+</section>
+
+  <section id="location">
+    <h2>Our Location</h2>
+    <p>Visit us at ByteXL Fine Dining, Jubilee Hills, Hyderabad, Telangana, India.</p>
+    <iframe src="https://maps.google.com/maps?q=jubilee%20hills%20hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border-radius: 10px; border: none;"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ByteXL Fine Dining. All rights reserved.</p>
+  </footer>
+</body>
+</html>
